@@ -1,7 +1,5 @@
 # Update version to release version with
-# mvn versions:set -DnewVersion=$VERSION
+export JAR_VERSION=$VERSION
 # Update version information in 2 readme.md to new version
-mvn clean deploy -P release
 
-# After deploy update version to new staging version
-# mvn versions:set -DnewVersion=$VERSION2-STAGING
+gradle clean build artifactoryPublish --no-daemon

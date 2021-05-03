@@ -51,7 +51,7 @@ public class Generator {
         try {            
             builder.withConnectorProvider(connectorProvider)
                    .withUri("ws://127.0.0.1:18080/ws")
-                   .withRealm("com.leapsight.test")
+                   .withRealm("com.magenta.test")
                    .withInfiniteReconnects()
                    .withReconnectInterval(3, TimeUnit.SECONDS);
             client1 = builder.build();

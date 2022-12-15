@@ -15,6 +15,10 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9.3'
     implementation 'org.msgpack:jackson-dataformat-msgpack:0.8.20'
 
+    // libsodium
+    implementation "com.goterl:lazysodium-java:5.1.4"
+    implementation "net.java.dev.jna:jna:5.12.1"
+
     // Test dependencies
     testImplementation 'junit:junit:4.12'
 }

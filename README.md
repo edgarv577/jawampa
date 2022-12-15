@@ -473,4 +473,4 @@ sequenceDiagram
 
 ### Auth cryptosign
 -------------------
-To be able to implement the `cryptosign` auth method we are using the [**libsodium**](https://doc.libsodium.org/password_hashing/the_argon2i_function.html) library and the proper binding in Java [Lazysodium](https://github.com/terl/lazysodium-java)
+To be able to implement the `cryptosign` auth method we are using the [**libsodium**](https://doc.libsodium.org/) library and the proper binding in Java [Lazysodium](https://github.com/terl/lazysodium-java)

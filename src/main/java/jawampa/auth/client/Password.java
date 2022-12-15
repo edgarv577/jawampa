@@ -21,7 +21,6 @@ public class Password implements ClientSideAuthentication {
 	@Override
 	public AuthenticateMessage handleChallenge(ChallengeMessage message,
 			ObjectMapper objectMapper) {
-		System.out.println("handleChallenge message: " + message.authMethod);
 		return new AuthenticateMessage(password, objectMapper.createObjectNode());
 	}
 }

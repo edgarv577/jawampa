@@ -1,7 +1,6 @@
 package jawampa;
 
-import jawampa.auth.client.CryptosignAuth;
-import jawampa.auth.client.Password;
+import jawampa.auth.client.Cryptosign;
 import jawampa.connection.IWampConnectorProvider;
 import jawampa.transport.netty.NettyWampClientConnectorProvider;
 import jawampa.transport.netty.NettyWampConnectionConfig;
@@ -31,7 +30,7 @@ public class CryptosignAuthTest {
                // .withRealm("com.leapsight.test")
                .withAuthId("cryptosign_user")
                // .withAuthId("device1")
-               .withAuthMethod(new CryptosignAuth(
+               .withAuthMethod(new Cryptosign(
                      "4ffddd896a530ce5ee8c86b83b0d31835490a97a9cd718cb2f09c9fd31c4a7d71766c9e6ec7d7b354fd7a2e4542753a23cae0b901228305621e5b8713299ccdd",
                      "1766c9e6ec7d7b354fd7a2e4542753a23cae0b901228305621e5b8713299ccdd"))
                .withInfiniteReconnects()
@@ -41,7 +40,7 @@ public class CryptosignAuthTest {
          client1 = builder.build();
          client1.open();
       } catch (Exception e) {
-         e.printStackTrace();
+         System.err.println("Error building wamp client: " + e.getLocalizedMessage());
          return;
       }
 

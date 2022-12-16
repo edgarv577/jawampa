@@ -6,14 +6,15 @@ plugins {
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    implementation 'io.netty:netty-codec-http:4.1.51.Final'
-    implementation 'io.netty:netty-handler:4.1.51.Final'
+    implementation 'io.netty:netty-codec-http:4.1.86.Final'
+    implementation 'io.netty:netty-handler:4.1.86.Final'
     implementation 'io.reactivex:rxjava:1.3.8'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9.3'
-    implementation 'org.msgpack:jackson-dataformat-msgpack:0.8.20'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.0'
+    implementation 'org.msgpack:jackson-dataformat-msgpack:0.9.3'
 
     // libsodium
     implementation "com.goterl:lazysodium-java:5.1.4"

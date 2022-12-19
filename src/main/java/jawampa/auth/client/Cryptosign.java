@@ -13,7 +13,7 @@ import jawampa.WampMessages.ChallengeMessage;
 
 public class Cryptosign implements ClientSideAuthentication {
 
-	private static final LazySodiumJava LAZY_SODIUM = new LazySodiumJava(new SodiumJava(),
+	private static final LazySodiumJava LAZY_SODIUM = new LazySodiumJava(new SodiumJava("/usr/lib/x86_64-linux-gnu/libsodium.so"),
 			StandardCharsets.UTF_8);
 	private final Sign.Native cryptoSignNative;
 

@@ -474,4 +474,16 @@ sequenceDiagram
 ### Cryptosign Auth
 
 To be able to implement the `cryptosign` auth method we are using the [**libsodium**](https://doc.libsodium.org/) library and the proper binding in Java [Lazysodium](https://github.com/terl/lazysodium-java).
-It uses auto-loading of the prepackaged native C Libsodium library from Lazysodium's resources folder. For more information, please visit [Initialise Sodium](https://github.com/terl/lazysodium-java/wiki/Getting-started#1-initialise-sodium)
+It uses absolute path for loading of the native C Libsodium library. Then this library must be available in the java classpath and could be extracted from Lazysodium's resources folder.
+For more information, please visit [Initialise Sodium](https://github.com/terl/lazysodium-java/wiki/Getting-started#1-initialise-sodium). 
+
+To test it, you can use the available main class **CryptosignAuthTest** in the test folder.
+
+
+Release and labeling
+--------------------
+
+```bash
+git tag $MAJOR.$MINOR.$PATCH -a -m "version description"
+git push origin $MAJOR.$MINOR.$PATCH
+```

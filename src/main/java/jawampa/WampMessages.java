@@ -1115,7 +1115,7 @@ public class WampMessages {
                         // it is due to we receive here a NullNode object
                         // when the args are empty
                         // TODO: check if it is a problem with the newest versions of bondy?
-                        arguments = new ArrayNode(JsonNodeFactory.instance);
+                        arguments = new ArrayNode(JsonNodeFactory.instance, 0);
                     } else  {
                         throw new WampError(ApplicationError.INVALID_MESSAGE);
                     }
